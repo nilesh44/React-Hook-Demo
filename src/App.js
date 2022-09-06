@@ -2,8 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import React, { Component, useState } from "react";
 import { Test } from "./Test";
-import { Counter } from "./Counter";
-import { UseStateObjecAsVeriableDemo } from "./UseStateObjecAsVeriableDemo";
+import { Counter } from "./useEffectHookDemo/Counter";
+import { UseStateObjecAsVeriableDemo } from "./useStateDemo/UseStateObjecAsVeriableDemo";
 function App() {
   const [counterOn, setCounterOn] = useState(true);
   const [testname, setTestname] = useState("");
