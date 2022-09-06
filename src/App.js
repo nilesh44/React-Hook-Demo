@@ -5,7 +5,7 @@ import { Test } from "./Test";
 import { Counter } from "./Counter";
 function App() {
   const [counterOn, setCounterOn] = useState(true);
-
+  const [testname, setTestname] = useState("");
   function DisplayCounter() {
     if (counterOn) {
       return <Counter />;
@@ -19,11 +19,25 @@ function App() {
   const handleShowCounter = () => {
     setCounterOn((counterOn) => true);
   };
+  const handleUpdateName = (event) => {
+    setTestname((name) => {
+      return event.target.value;
+    });
+  };
   return (
     <div className="App">
       <button onClick={handleHideCounter}> hideCounter</button>
       <button onClick={handleShowCounter}> showCounter</button>
-      <div>{counterOn && <Counter />}</div>
+
+      <input
+        type="text"
+        name="testName"
+        id="testName"
+        value={testname}
+        onChange={handleUpdateName}
+      />
+
+      <div>{counterOn && <Counter name={testname} />}</div>
     </div>
   );
 }
