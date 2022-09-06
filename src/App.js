@@ -3,6 +3,7 @@ import "./App.css";
 import React, { Component, useState } from "react";
 import { Test } from "./Test";
 import { Counter } from "./Counter";
+import { UseStateObjecAsVeriableDemo } from "./UseStateObjecAsVeriableDemo";
 function App() {
   const [counterOn, setCounterOn] = useState(true);
   const [testname, setTestname] = useState("");
@@ -26,7 +27,7 @@ function App() {
   };
   return (
     <div className="App">
-      <button onClick={handleHideCounter}> hideCounter</button>
+      {/* <button onClick={handleHideCounter}> hideCounter</button>
       <button onClick={handleShowCounter}> showCounter</button>
 
       <input
@@ -37,7 +38,9 @@ function App() {
         onChange={handleUpdateName}
       />
 
-      <div>{counterOn && <Counter name={testname} />}</div>
+      <div>{counterOn && <Counter name={testname} />}</div> */}
+
+      <UseStateObjecAsVeriableDemo />
     </div>
   );
 }
