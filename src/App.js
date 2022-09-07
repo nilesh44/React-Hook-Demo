@@ -4,6 +4,8 @@ import React, { Component, useState } from "react";
 import { Test } from "./Test";
 import { Counter } from "./useEffectHookDemo/Counter";
 import { UseStateObjecAsVeriableDemo } from "./useStateDemo/UseStateObjecAsVeriableDemo";
+import { Employee } from "./useMemoAndUseCallBackHookDemo/Employee";
+import { CounterWithUseReducer } from "./useReducer/CounterWithUseReducer";
 function App() {
   const [counterOn, setCounterOn] = useState(true);
   const [testname, setTestname] = useState("");
@@ -40,7 +42,9 @@ function App() {
 
       <div>{counterOn && <Counter name={testname} />}</div> */}
 
-      <UseStateObjecAsVeriableDemo />
+      {/* <UseStateObjecAsVeriableDemo /> */}
+      {/* <Employee /> */}
+      <CounterWithUseReducer />
     </div>
   );
 }
